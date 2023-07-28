@@ -1,0 +1,17 @@
+[gpio4=1]
+# Settings here are applied if GPIO 4 is high
+
+[all]
+hdmi_enable_rkp60=0
+camera_auto_detect=0
+arm_boost=0
+arm_64bit=0
+# Set range of pins as Input
+gpi0=17-21=ip
+# Set range of pins as output
+gpi0=17-21=op
+temp_limit=85
+force_turbo=0
+never_over_voltage=1
+disable_auto_turbo=1
+ignore_lcd=1
