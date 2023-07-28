@@ -17,7 +17,13 @@ apt install xrdp
 # Get low level config
 vcgencmd get_config int
 vcgencmd get_config str
+
+# Monitor GPU temperature
 vcgencmd measure_temp
+vcgencmd measure_volts
+
+# Configure Pi from commandline
+raspi-config
 
 # Shutdown
 shutdown -h now
