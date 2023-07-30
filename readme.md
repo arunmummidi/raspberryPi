@@ -11,6 +11,13 @@ userdel pi
 # Disable display manager service
 systemctl disable ligtdm
 
+# Remove xserver
+apt remove xserver-xorg
+
+# Disable VNC server for remote access
+vncserver-x11-serviced
+apt remove realvnc-vnc-server
+
 # Install xrdp for remote GUI
 apt install xrdp
 
@@ -18,7 +25,7 @@ apt install xrdp
 vcgencmd get_config int
 vcgencmd get_config str
 
-# Monitor GPU temperature
+# Monitor GPU temperature & volts
 vcgencmd measure_temp
 vcgencmd measure_volts
 
@@ -31,3 +38,6 @@ shutdown -h now
 # Install remmina client on a
 # desktop to access Pi's GUI
 apt install remmina
+
+# See pin map
+pinout
