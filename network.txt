@@ -2,4 +2,4 @@ echo "
 interface <network interface ID. Ex: wlan0 for wirelss>
 static_routers=<router/gateway IP address>
 static domain_name_servers=<router/gateway/DNS server IP address>
-static ip_address=<Desired IP in CIDR notation. Ex: 192.168.0.5>" >> ~/text.txt
+static ip_address=<Desired IP in CIDR notation. Ex: 192.168.0.5>" >> /etc/dhcpcd.conf
