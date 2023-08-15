@@ -1,0 +1,7 @@
+Fun tasks:
+* Basic LED control
+* Multi LED control
+* Basic DC motor control
+* Detect an auto and blink LED
+* Switch ON light during night only
+* Calculate time spent in kitchen
