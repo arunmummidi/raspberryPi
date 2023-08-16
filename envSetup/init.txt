@@ -5,7 +5,7 @@ useradd <new user>
 useradd <new user> sudo
 
 # Disable stock user's autologin & delete
-systemctl disable getty@tty && reboot
+systemctl disable getty@tty
 userdel pi
 
 # Disable display manager service
@@ -15,11 +15,8 @@ systemctl disable ligtdm
 apt remove xserver-xorg
 
 # Disable VNC server for remote access
-vncserver-x11-serviced
+systemctl disable vncserver-x11-serviced
 apt remove realvnc-vnc-server
-
-# Install xrdp for remote GUI
-apt install xrdp
 
 # Get low level config
 vcgencmd get_config int
@@ -29,15 +26,18 @@ vcgencmd get_config str
 vcgencmd measure_temp
 vcgencmd measure_volts
 
-# Configure Pi from commandline
+# Configure Pi
 raspi-config
 
 # Shutdown
 shutdown -h now
 
+# See pin map
+pinout
+
 # Install remmina client on a
 # desktop to access Pi's GUI
 apt install remmina
 
-# See pin map
-pinout
+# Install xrdp for remote GUI
+apt install xrdp
