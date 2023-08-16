@@ -1,5 +1,4 @@
-echo "
-interface <network interface ID. Ex: wlan0 for wirelss>
-static_routers=<router/gateway IP address>
-static domain_name_servers=<router/gateway/DNS server IP address>
-static ip_address=<Desired IP in CIDR notation. Ex: 192.168.0.5/24>" >> /etc/dhcpcd.conf
+interface wlan0
+static ip_address=192.168.1.31/24
+static routers=192.168.1.1
+static domain_name_servers=192.168.1.1
