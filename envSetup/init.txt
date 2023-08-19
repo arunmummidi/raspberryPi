@@ -41,3 +41,8 @@ apt install remmina
 
 # Install xrdp for remote GUI
 apt install xrdp
+
+# Configure basic TCP/UDP security
+apt install ufw && ufw allow from 192.168.0.0/27 to any port 22 # Making sure not getting locked out
+ufw show added
+ufw enable
